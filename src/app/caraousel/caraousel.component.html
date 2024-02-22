@@ -1,0 +1,30 @@
+<div class="carousel-wrapper">
+  <div class="carousel" caraousel-config>
+    <img
+      *ngFor="let slide of slides"
+      [class]="slide.class"
+      [src]="slide.path"
+    />
+
+    <div class="carousel__button--next">
+      <button
+        mat-mini-fab
+        color="warn"
+        aria-label="Example icon button with a filter list icon"
+        (click)="moveNext()"
+      >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="carousel__button--prev">
+      <button
+        mat-mini-fab
+        color="warn"
+        aria-label="Example icon button with a filter list icon"
+        (click)="movePrev()"
+      >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
